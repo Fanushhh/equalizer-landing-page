@@ -1,0 +1,23 @@
+@import './styles/mixins';
+@import './styles/variables';
+
+
+
+.App{
+    background: url('../../../public/images/bg-main-mobile.png');
+    background-size: 600px;
+    background-position: top -250px right -200px;
+    background-repeat: no-repeat;
+    
+    @include for-tablet{
+        background-image: url('../../../public/images/bg-main-tablet.png'), url('../public/images/bg-pattern-1.svg');
+        background-position: top -112px left -254px, top -32px right -40px;
+        background-repeat: no-repeat, no-repeat;
+        background-size: 983px, 260px;
+    } 
+    @include for-desktop{
+        background-image: url('../../../public/images/bg-main-desktop.png'), url('../public/images/bg-pattern-1.svg');
+        background-position: top -160px left -130px, top -50px right ;
+        background-size: 1613px, 312px;
+    }
+} 

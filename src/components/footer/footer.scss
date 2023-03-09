@@ -1,0 +1,42 @@
+@import '../../App.scss';
+
+.footer{
+    padding: 0 1.5rem;
+    .footerWrapper{
+        padding: 4rem 0;
+        .logoContainer{
+            margin-bottom: 2rem;
+        }
+    }
+    .iconsContainer{
+        display: flex;
+        gap:1rem;
+        padding-bottom: calc(80 /16) + rem;
+    }
+    .iconsContainer img:hover{
+        filter:hue-rotate(30deg);
+        cursor: pointer;
+    }
+    @include for-tablet{
+        position: relative;
+        padding: 0 2.5rem 4rem;
+        .footerWrapper{
+            max-width: 400px;
+            padding: 0;
+        }
+        .iconsContainer{
+            position: absolute;
+            right:0;
+            bottom:0;
+            padding: inherit;
+        }
+         
+    }
+    
+    @include for-desktop{
+        padding: 0 10.3rem 4rem;
+        
+    }
+
+    
+}

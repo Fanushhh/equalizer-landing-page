@@ -1,0 +1,123 @@
+@import '../../App.scss';
+
+
+.cta{
+    position: relative;
+    margin-top: calc(166 / 16) + rem;
+    background-color: $dark-blue;
+    border-radius: 12px;
+    color:$white;
+    .backgroundCard{
+        background:url('../../../public/images/bg-pattern-2.svg'); 
+        background-repeat: no-repeat;
+        background-size: 280px;
+        background-position: top center;
+        height: 380px;
+        img{
+            width: 100%;
+            max-width: calc(208/ 16) + rem;
+            position: absolute;
+            top: -98px;
+            left: 80.67px;
+        }        
+    }
+
+    .card{
+        background-color: $orange;
+        border-radius: 12px;
+        padding: calc(48/16) + rem calc(36/16) + rem;
+        width: 100%;
+        h2{
+            font-size: 2rem;
+            line-height: 2.5rem;
+            margin-bottom: calc(12/16) + rem;
+        }
+        .cardDesc{
+            margin-bottom: calc(36/16) + rem;
+        }
+        .priceWrapper{
+            display: flex;
+            align-items: center;
+            gap:.8rem;
+            font-size: 1.25rem;
+            margin-bottom: 2rem;
+            span{
+                font-size: calc(65/16) + rem;
+                font-weight: $bold;
+            }
+        }
+        .buttonsContainer{
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            gap:1rem;
+            button{
+                border: none;
+                border-radius: .75rem;
+                padding: 1rem 0;
+                font-weight: $bold;
+                width: 100%;
+                max-width: 336px;
+                cursor: pointer;
+                img{
+                    display: inline-block;
+                    padding-right: .5rem;
+                }
+                
+            }
+            .appleBtn{
+                background-color: $dark-blue;
+                color:$white;
+            }
+        }
+
+        .appleBtn:hover{
+            background-color: $light-blue;
+        }
+        .androidBtn:hover{
+            background-color: $yellow;
+            
+        }
+         
+    }
+
+    @include for-tablet{
+        height: 600px;
+        max-width: 700px;
+        margin: calc(166/16) + rem auto;
+        .card{
+            position: absolute;
+            right:calc(58/16) + rem;
+            bottom: -100px;
+            width: 400px;
+        }
+    }
+
+    @include for-desktop{
+        max-width: 1110px;
+        margin-top: calc(321 / 16) + rem;
+        .backgroundCard{
+            background-size: 312px;
+            background-position: top -40px left 336px;
+            height: 600px;
+            img{
+                max-width: 312px;
+                top:-215px;
+                left: 108px;
+            }
+        }
+        .card{
+            font-size: $p-size-1;
+            max-width: 450px;
+            right:calc(95/16) + rem;
+            h2{
+                font-size: $font-size-L;
+                margin-bottom: calc(22/16) + rem;
+            }
+            .priceWrapper{
+                margin-bottom: calc(46/16) + rem;
+            }
+        }
+    }
+    
+}
