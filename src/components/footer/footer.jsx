@@ -17,9 +17,9 @@ export default function Footer({logo, copyright,question,fbIcon, instaIcon, twit
                 </div>
             </div>
             <div className="iconsContainer">
-                <img src={fbIcon} />
-                <img src={instaIcon} />
-                <img src={twitterIcon} />
+                <img src={fbIcon} alt='social icons'/>
+                <img src={instaIcon} alt='social icons'/>
+                <img src={twitterIcon} alt='social icons'/>
             </div>
         </div>
     )
